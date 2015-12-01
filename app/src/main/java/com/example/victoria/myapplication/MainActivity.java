@@ -14,11 +14,11 @@ public class MainActivity extends AppCompatActivity {
 
     //Define Tag for log messanges
 
-    private static final String TAG ="MainActivity";
+    private static final String TAG = "MainActivity";
 
     //Define Data between Activities
 
-  //  private static final String SELECTED_VERSION = "com.example.android.selected_version";
+    // private static final String SELECTED_VERSION = "com.example.android.selected_version";
 
     //Defining Buttons
 
@@ -28,8 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mAvatarNudging;
 
     private String mSelectedVersion;
-
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,51 +36,51 @@ public class MainActivity extends AppCompatActivity {
 
         //Instantiate Buttons and set Listeners
 
-        mNoAvatarNoNudging= (Button) findViewById(R.id.no_avatar_no_nudging);
-        mNoAvatarNoNudging.setOnClickListener(new View.OnClickListener(){
+        mNoAvatarNoNudging = (Button) findViewById(R.id.no_avatar_no_nudging);
+        mNoAvatarNoNudging.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 //Change to Standard Teminal version
-                mSelectedVersion= "NoAvatarNoNudging";
+                mSelectedVersion = "NoAvatarNoNudging";
                 mLaunchTerminal(mSelectedVersion);
             }
         });
 
-        mNoAvatarNudging= (Button) findViewById(R.id.no_avatar_nudging);
-        mNoAvatarNudging.setOnClickListener(new View.OnClickListener(){
+        mNoAvatarNudging = (Button) findViewById(R.id.no_avatar_nudging);
+        mNoAvatarNudging.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 //Change to only Nudging
-                mSelectedVersion= "Nudging";
+                mSelectedVersion = "Nudging";
                 mLaunchTerminal(mSelectedVersion);
             }
         });
 
         mAvatarNoNudging = (Button) findViewById(R.id.avatar_no_nudging);
-        mAvatarNoNudging.setOnClickListener(new View.OnClickListener(){
+        mAvatarNoNudging.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 //Change to only Avatar
-                mSelectedVersion= "Avatar";
+                mSelectedVersion = "Avatar";
                 mLaunchTerminal(mSelectedVersion);
             }
         });
 
-        mAvatarNudging= (Button) findViewById(R.id.avatar_nudging);
-        mAvatarNudging.setOnClickListener(new View.OnClickListener(){
+        mAvatarNudging = (Button) findViewById(R.id.avatar_nudging);
+        mAvatarNudging.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 //Use Combined Version
-                mSelectedVersion= "AvatarNudging";
+                mSelectedVersion = "AvatarNudging";
                 mLaunchTerminal(mSelectedVersion);
             }
         });
     }
 
-    public void mLaunchTerminal(String mVersion){
-            Intent i = new Intent(MainActivity.this, LaunchTerminal.class);
-            i.putExtra("SELECTED_VERSION", mVersion);
-            startActivity(i);
+    public void mLaunchTerminal(String mVersion) {
+        Intent i = new Intent(MainActivity.this, LaunchTerminal.class);
+        i.putExtra("SELECTED_VERSION", mVersion);
+        startActivity(i);
 
     }
 
