@@ -1,5 +1,6 @@
 package com.example.victoria.myapplication;
 
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -24,13 +25,15 @@ public class LaunchTerminal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        setContentView(R.layout.activity_launch_terminal);
+
         mSelectedVersion=getIntent().getStringExtra("SELECTED_VERSION");
-
-//        mVersionTextView = (TextView) findViewById(R.id.version_textView);
-
         Log.d(TAG,mSelectedVersion);
 
-   //     mVersionTextView.setText("test"); App stüruzt ab wenn man es nicht kommentiert
+        FragmentManager fm= getFragmentManager();
+
+
+
     }
 
 }
