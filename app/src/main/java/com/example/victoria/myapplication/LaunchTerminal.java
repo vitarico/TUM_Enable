@@ -1,5 +1,6 @@
 package com.example.victoria.myapplication;
 
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -31,6 +32,7 @@ public class LaunchTerminal extends AppCompatActivity {
         Log.d(TAG,mSelectedVersion);
 
         FragmentManager fm= getFragmentManager();
+        //Fragment fragment = fm.findFragmentById(R.id.activity_launch_terminal);
 
 
 
