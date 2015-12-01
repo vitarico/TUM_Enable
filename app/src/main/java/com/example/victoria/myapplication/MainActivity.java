@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Change to Standard Teminal version
-                mSelectedVersion = "NoAvatarNoNudging";
+                mSelectedVersion = "StandardVersion";
                 mLaunchTerminal(mSelectedVersion);
             }
         });
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Change to only Nudging
-                mSelectedVersion = "Nudging";
+                mSelectedVersion = "NudgingOnly";
                 mLaunchTerminal(mSelectedVersion);
             }
         });
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Change to only Avatar
-                mSelectedVersion = "Avatar";
+                mSelectedVersion = "AvatarOnly";
                 mLaunchTerminal(mSelectedVersion);
             }
         });
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Use Combined Version
-                mSelectedVersion = "AvatarNudging";
+                mSelectedVersion = "CombinedVersion";
                 mLaunchTerminal(mSelectedVersion);
             }
         });

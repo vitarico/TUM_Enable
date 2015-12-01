@@ -27,15 +27,30 @@ public class LaunchTerminal extends FragmentActivity {
         setContentView(R.layout.activity_launch_terminal);
 
         mSelectedVersion=getIntent().getStringExtra("SELECTED_VERSION");
-        Log.d(TAG,mSelectedVersion);
+
 
         FragmentManager fm= getFragmentManager();
         Fragment fragment = fm.findFragmentById(R.id.fragment_container);
 
             if (fragment==null){
-                fragment = new WelcomeAvatarOnly();
-                fm.beginTransaction().add(R.id.fragment_container, fragment).commit();
+
+                switch (mSelectedVersion) {
+                    case "AvatarOnly":
+                        fragment = new WelcomeAvatarOnly();
+                        break;
+                    case "NudingOnly":
+                        fragment = new WelcomeNudgingOnly();
+                        break;
+                    case "CombinedVersion":
+                        fragment = new WelcomeCombinedVersion();
+                        break;
+                    default:
+                        fragment = new WelcomeStandardVersion();
+                }
+                    fm.beginTransaction().add(R.id.fragment_container, fragment).commit();
             }
+
+
 
     }
 }
