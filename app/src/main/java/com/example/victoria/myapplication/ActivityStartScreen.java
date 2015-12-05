@@ -1,20 +1,18 @@
 package com.example.victoria.myapplication;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class ActivityStartScreen extends AppCompatActivity {
 
     //Define Tag for log messanges
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "ActivityStartScreen";
 
     //Define Data between Activities
 
@@ -32,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.layout_start_screen);
 
         //Instantiate Buttons and set Listeners
 
@@ -78,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void mLaunchTerminal(String mVersion) {
-        Intent i = new Intent(MainActivity.this, LaunchTerminal.class);
+        Intent i = new Intent(ActivityStartScreen.this, ActivityOrderingScreen.class);
         i.putExtra("SELECTED_VERSION", mVersion);
         startActivity(i);
 

@@ -26,7 +26,7 @@ public class WelcomeAvatarOnly extends Fragment {
     //You Inflate Fragment in onCreateView
     @Override
     public View onCreateView(LayoutInflater inflater,ViewGroup container, Bundle savedInstaceState) {
-       View v =inflater.inflate(R.layout.welcome_screen_avatar_only_version, container, false); //a true would show the layout now, we are doing thsi in the LaunchTerminal
+       View v =inflater.inflate(R.layout.welcome_screen_avatar_only_version, container, false); //a true would show the layout now, we are doing thsi in the ActivityOrderingScreen
        mVersionField = (TextView) v.findViewById(R.id.VersionText);
         mVersionField.setText("Avatar Only");
 
