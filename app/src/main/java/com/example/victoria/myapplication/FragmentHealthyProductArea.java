@@ -11,14 +11,12 @@ import android.widget.TextView;
 /**
  * Created by Lennart Mittag on 05.12.2015.
  */
-public class FragmentHealthyProductArea extends Fragment
-{
+public class FragmentHealthyProductArea extends Fragment {
     private TextView mVersionField;
 
     //onCreate only Configures the fragment instance
     @Override
-    public void onCreate(Bundle saverdInstacesState)
-    {
+    public void onCreate(Bundle saverdInstacesState) {
 
         super.onCreate(saverdInstacesState);
     }
@@ -26,8 +24,7 @@ public class FragmentHealthyProductArea extends Fragment
 
     //You Inflate Fragment in onCreateView
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstaceState)
-    {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstaceState) {
         View v = inflater.inflate(R.layout.layout_healthy_product_area, container, false); //a true would show the layout now, we are doing thsi in the ActivityOrderingScreen
 
         Log.d("FragmentHPArea", "Standard Version");

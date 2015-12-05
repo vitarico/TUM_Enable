@@ -10,11 +10,11 @@ import android.widget.Button;
 
 public class ActivityStartScreen extends AppCompatActivity {
 
-    //Define Tag for log messanges
+    // Define Tag for log messanges
 
     private static final String TAG = "ActivityStartScreen";
 
-    //Define Data between Activities
+    // Define Data between Activities
 
     // private static final String SELECTED_VERSION = "com.example.android.selected_version";
 
@@ -26,7 +26,7 @@ public class ActivityStartScreen extends AppCompatActivity {
     private Button mAvatarNudging;
 
     private String mSelectedVersion;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -103,32 +103,4 @@ public class ActivityStartScreen extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-    /* If needed
-    @Override
-    public void onStart(){
-        super.onStart();
-    }
-
-    @Override
-    public void onPause(){
-        super.onPause();
-    }
-
-    @Override
-    public void onResume(){
-        super.onResume();
-    }
-
-    @Override
-    public void onStop(){
-        super.onStop();
-    }
-
-    @Override
-    public void onDestroy(){
-        super.onDestroy();
-    }
-    */
-
 }
