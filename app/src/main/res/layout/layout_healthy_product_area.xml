@@ -11,16 +11,19 @@
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:src="@drawable/product_big_mac_product_preview"/>
 
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:src="@drawable/product_big_salad_quinoa_product_preview"/>
 
     <ImageButton
         android:id="@+id/imageButton3"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:src="@drawable/product_coca_cola_product_preview"/>
 </LinearLayout>
 
